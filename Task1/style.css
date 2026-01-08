@@ -1,0 +1,211 @@
+body{
+    color: white;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(180deg, #08192a 0%, #050f1a 100%);
+}
+
+main{
+    padding: 40px 20px 60px;
+}
+
+.entry{
+    margin-bottom: 60px;
+}
+
+hr{
+    margin-top: 12px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 22px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    background: rgba(6, 14, 28, 0.35);
+}
+
+header::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #38bdf8;
+    box-shadow: 0 0 8px rgba(56,189,248,0.8);
+}
+
+.pricing{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+button{
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.12);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+button:hover{
+    transform: translateY(-2px);
+    background: rgba(10, 22, 38, 0.75);
+}
+
+@media (max-width:600px){
+    .pricing{
+        grid-template-columns: 1fr;
+    }
+}
+
+.price_card{
+    padding:20px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.06);
+    position: relative;
+    overflow: hidden;
+}
+
+.price_card:hover{
+    transform: translateY(-6px);
+    background: rgba(255,255,255,0.09);
+}
+
+.yearly{
+    display: none; 
+}
+
+#billing{
+    display: none;
+}
+
+#billing:checked ~ .pricing .monthly{ 
+    display: none; 
+}
+
+#billing:checked ~ .pricing .yearly{ 
+    display: block; 
+}
+
+.monthly_yearly label{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.06);
+}
+
+.toggle{
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.08);
+    cursor: pointer;
+}
+
+.switch{
+    width: 44px;
+    height: 22px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 999px;
+    position: relative;
+}
+
+.switch::before{
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.2s;
+}
+
+#billing:checked + .monthly_yearly .switch::before{
+    transform: translateX(22px);
+}
+
+.monthly, .yearly{
+    font-size: 34px;
+    font-weight: 700;
+    margin: 10px 0 14px;
+}
+
+ul{
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    color: rgba(233,240,255,0.85);
+}
+
+li::before{
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 0 3px rgba(34,197,94,0.15);
+}
+
+.ribbon{
+    position: absolute;
+    top: 16px;
+    right: -52px;
+    width: 180px;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: #072033;
+    background: #38bdf8;
+    transform: rotate(45deg);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+.monthly small, .yearly small{
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+.yearly_label{
+    display: inline-flex;
+    align-items: center;
+}
+
+.yearly_label::after{
+    content: "-20%";
+    margin-left: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #38bdf8;
+    background: rgba(56,189,248,0.12);
+    padding: 2px 6px;
+    border-radius: 6px;
+}
+
+
+
+
+
+    
