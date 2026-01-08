@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+    <!-- Task 1 Era Alimemeti -->
+    <head>
+          <style>
+           body{
+            color: white;
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #0b1c2d;
+            }
+            main{
+                padding: 40px 20px 60px;
+            }
+            .entry{
+                margin-bottom: 60px;
+            }
+            hr{
+                margin-top: 12px;
+            }
+            header{
+                margin-top:10px;
+            }
+            .pricing{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                padding: 20px;
+            }
+            button{
+                width: 100%;
+                margin-top: 16px;
+                padding: 12px 14px;
+                border-radius: 12px;
+                border: 1px solid rgba(255,255,255,0.2);
+                background: rgba(255,255,255,0.12);
+                color: white;
+                cursor: pointer;
+                transition: transform 0.2s, background 0.2s;
+                }
+            @media (max-width:600px){
+                .pricing{
+                    grid-template-columns: 1fr;
+                }
+            }
+            .price_card{
+                padding:20px;
+                border:1px solid white;
+                border-radius: 14px;
+                border: 1px solid rgba(255,255,255,0.18);
+                background: rgba(255,255,255,0.06);
+            }
+            .price_card:hover{
+                transform: translateY(-6px);
+                background: rgba(255,255,255,0.09);
+            }
+            .yearly {
+             display: none; 
+            }
+            #billing {
+                display: none;
+            }
+            #billing:checked ~ .pricing .monthly { 
+                display: none; 
+            }
+            #billing:checked ~ .pricing .yearly { 
+                display: block; 
+            }
+            .monthly_yearly label{
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 14px;
+                border-radius: 999px;
+                border: 1px solid rgba(255,255,255,0.18);
+                background: rgba(255,255,255,0.06);
+            }
+        .monthly_yearly input{ transform: scale(1.1); }
+        .toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.25);
+            background: rgba(255,255,255,0.08);
+            cursor: pointer;
+        }
+        .switch {
+            width: 44px;
+            height: 22px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 999px;
+            position: relative;
+        }
+
+        .switch::before {
+            content: "";
+            width: 18px;
+            height: 18px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            transition: transform 0.2s;
+        }
+        #billing:checked + .monthly_yearly .switch::before {
+            transform: translateX(22px);
+        }
+        .monthly, .yearly{
+            font-size: 34px;
+            font-weight: 700;
+            margin: 10px 0 14px;
+        }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <u>HTML/CSS can do it all!</u>
+            <hr>
+        </header>
+        <main>
+            <section class="entry">
+                <h1>Simple plans for teams of any size</h1>
+                <p>Toggle monthly/yearly pricing, meet out team, or reach out-no JavaScript required.</p>
+            </section>
+            <input type="checkbox" id="billing">
+            <section class="monthly_yearly">
+                <label for="billing" class="toggle">
+                    <div>Monthly</div>
+                    <div class="switch"></div>
+                    <div>Yearly</div>
+                </label>
+            </section>
+
+            <section class="pricing">
+                <div class="price_card">
+                    <h2>Basic</h2>
+                    <p>For perosnal projects and small experiments.</p>
+                    <div class="monthly">$9/month</div>
+                    <div class="yearly">$86/year</div>
+                    <ul>
+                        <li>Up to 3 projects</li>
+                        <li>Basic analytics</li>
+                        <li>Basic support</li>
+                    </ul>
+                    <button type="button">Choose Basic</button>
+                </div>
+                <div class="price_card">
+                    <h2>Pro</h2>
+                    <p>For teams that need more scale and faster support.</p>
+                    <div class="monthly">19$/month</div>
+                    <div class="yearly">$182/year</div>
+                    <ul>
+                        <li>Unlimited projects</li>
+                        <li>Team collaboration</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <button type="button">Choose Pro</button>
+                </div>
+                <div class="price_card">
+                    <h2>Premium</h2>
+                    <p>For larger organizations with custom requirements</p>
+                    <div class="monthly">$39/month</div>
+                    <div class="yearly">$374/year</div>
+                <ul>
+                    <li>SSO and audit logs</li>
+                    <li>Custom integrations</li>
+                    <li>Account manager</li>
+                </ul>
+                <button type="button">Choose premium</button>
+            </div>
+            </section>
+        </main>
+    </body> 
+</html>
