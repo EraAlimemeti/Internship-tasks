@@ -1,0 +1,500 @@
+body{
+    color: white;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(180deg, #08192a 0%, #050f1a 100%);
+}
+main{
+    padding: 40px 20px 60px;
+}
+.entry{
+    margin-bottom: 60px;
+}
+header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 22px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    background: rgba(6, 14, 28, 0.35);
+}
+header::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #38bdf8;
+    box-shadow: 0 0 8px rgba(56,189,248,0.8);
+}
+.pricing{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+button{
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.12);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+button:hover{
+    transform: translateY(-2px);
+    background: rgba(10, 22, 38, 0.75);
+}
+@media (max-width:600px){
+    .pricing{
+        grid-template-columns: 1fr;
+    }
+}
+.price_card{
+    padding:20px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.06);
+    position: relative;
+    overflow: hidden;
+}
+.price_card:hover{
+    transform: translateY(-6px);
+    background: rgba(255,255,255,0.09);
+}
+.yearly{
+    display: none;
+}
+#billing{
+    display: none;
+}
+#billing:checked ~ .pricing .monthly{
+    display: none;
+}
+#billing:checked ~ .pricing .yearly{
+    display: block;
+}
+.monthly_yearly label{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.06);
+}
+.toggle{
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.08);
+    cursor: pointer;
+}
+.switch{
+    width: 44px;
+    height: 22px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 999px;
+    position: relative;
+}
+.switch::before{
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.2s;
+}
+#billing:checked + .monthly_yearly .switch::before{
+    transform: translateX(22px);
+}
+.monthly, .yearly{
+    font-size: 34px;
+    font-weight: 700;
+    margin: 10px 0 14px;
+}
+ul{
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    color: rgba(233,240,255,0.85);
+}
+li::before{
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 0 3px rgba(34,197,94,0.15);
+}
+.ribbon{
+    position: absolute;
+    top: 16px;
+    right: -52px;
+    width: 180px;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: #072033;
+    background: #38bdf8;
+    transform: rotate(45deg);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+.monthly small, .yearly small{
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+.yearly_label{
+    display: inline-flex;
+    align-items: center;
+}
+.yearly_label::after{
+    content: "-20%";
+    margin-left: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #38bdf8;
+    background: rgba(56,189,248,0.12);
+    padding: 2px 6px;
+    border-radius: 6px;
+}
+header{
+    justify-content: space-between;
+}
+header nav{
+    display: flex;
+    gap: 20px;
+}
+header nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: 10px;
+}
+header nav a:hover{
+    background: rgba(255,255,255,0.08);
+}
+header input{
+    display:none;
+}
+main{
+  padding: 60px 20px;
+}
+section{
+  max-width: 900px;
+  margin: 0 auto;
+}
+h1{
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+section p{
+  color: rgba(255,255,255,0.7);
+}
+hr{
+  display: none;
+}
+header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(6, 14, 28, 0.55);
+  backdrop-filter: blur(10px);
+}
+.team-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  margin-top: 26px;
+}
+@media (max-width: 900px){
+  .team-grid{
+    grid-template-columns: 1fr;
+  }
+}
+.card{
+  height: 270px;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
+  position: relative;
+  overflow: hidden;
+  perspective: 1000px;
+  transition: transform 0.2s ease;
+}
+.card:hover{
+  transform: translateY(-4px);
+}
+.card::before{
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle at 30% 25%, rgba(56,189,248,0.22), transparent 55%);
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 0;
+}
+.card-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  z-index: 1;
+}
+.card:hover .card-inner,
+.card:focus-within .card-inner{
+  transform: rotateY(180deg);
+}
+.card-front,
+.card-back{
+  position: absolute;
+  inset: 0;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.card-front{
+  transform: rotateY(0deg);
+}
+.card-back{
+  transform: rotateY(180deg);
+}
+.avatar{
+  margin: 0 auto 14px;
+  display: block;
+  width: 86px;
+  height: 86px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.card h3{
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+}
+.role{
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+}
+.tags{
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.tags li{
+  margin: 0;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.05);
+  color: rgba(233,240,255,0.85);
+  font-size: 14px;
+}
+.tags li::before{
+  content: none;
+}
+
+.hamburger{
+  display: none;
+}
+@media (max-width: 900px){
+  .hamburger{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  header nav{
+    display: none;
+  }
+  #nav-tog:checked ~ nav{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    position: absolute;
+    left: 22px;
+    right: 22px;
+    top: 72px;
+    padding: 14px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.14);
+    background: rgba(6, 14, 28, 0.85);
+    backdrop-filter: blur(10px);
+  }
+}
+.hamburger span{
+  display:block;
+  width:22px;               
+  height:2px;                
+  background: rgba(233,240,255,0.95);
+  border-radius:999px;
+}
+.contact{
+  max-width: 900px;
+  margin: 0 auto;
+}
+.contact-form{
+  max-width: 980px;
+  margin: 18px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 22px;
+  padding: 22px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+}
+.contact-form .full{
+  grid-column: 1 / -1;
+}
+.contact-form label{
+  display: block;
+  font-weight: 600;
+  color: rgba(233,240,255,0.9);
+}
+.help{
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.55);
+  margin-top: 4px;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
+  color: white;
+  outline: none;
+  box-sizing: border-box;
+}
+.contact-form textarea{
+  min-height: 160px;
+  resize: vertical;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+  color: rgba(255,255,255,0.35);
+}
+.contact-form select{
+  padding-right: 36px;
+}
+.contact-form input:focus-visible,
+.contact-form select:focus-visible,
+.contact-form textarea:focus-visible{
+  border-color: rgba(56,189,248,0.55);
+  box-shadow: 0 0 0 4px rgba(56,189,248,0.14);
+}
+.contact-form input:user-invalid,
+.contact-form select:user-invalid,
+.contact-form textarea:user-invalid{
+  border-color: rgba(244,63,94,0.65);
+  box-shadow: 0 0 0 4px rgba(244,63,94,0.12);
+}
+.contact-form input:user-valid,
+.contact-form select:user-valid,
+.contact-form textarea:user-valid{
+  border-color: rgba(34,197,94,0.55);
+  box-shadow: 0 0 0 4px rgba(34,197,94,0.10);
+}
+.contact-form input[type="range"]{
+  padding: 0;
+  height: 28px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+.contact-form input[type="file"]{
+  padding: 10px;
+}
+.contact-form .full p{
+  margin: 0 0 10px;
+  font-weight: 700;
+  color: rgba(233,240,255,0.9);
+}
+.contact-form .full label{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 14px;
+  font-weight: 600;
+  color: rgba(233,240,255,0.85);
+}
+.contact-form input[type="radio"],
+.contact-form input[type="checkbox"]{
+  width: auto;
+  margin: 0;
+}
+.contact-form .actions{
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+.contact-form .actions button{
+  width: auto;
+  margin-top: 0;
+  padding: 10px 14px;
+  border-radius: 12px;
+}
+@media (max-width: 900px){
+  .contact-form{
+    grid-template-columns: 1fr;
+  }
+}
+.contact-form select {
+  color: white;
+}
+
+.contact-form option {
+  color: #0b1220;
+  background: white;
+}
+
+.contact-form select:focus-visible {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 4px rgba(56,189,248,0.25);
+}
+footer {
+  margin-top: 80px;
+  padding: 22px 20px;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(233,240,255,0.65);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  background: rgba(6, 14, 28, 0.55);
+}
+footer p {
+  margin: 0;
+}

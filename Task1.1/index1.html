@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+    <!-- Task 1 Era Alimemeti -->
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <header>
+        <div>
+            <u>HTML/CSS can do it all!</u>
+        </div>
+        <input type="checkbox" id="nav-tog">
+        <label class="hamburger" for="nav-tog" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </label>
+        <nav>
+            <a class="active" href="index1.html#pricing">Pricing</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+        <main>
+            <section class="entry">
+                <h1>Simple plans for teams of any size</h1>
+                <p>Toggle monthly/yearly pricing, meet out team, or reach out-no JavaScript required.</p>
+            </section>
+            <input type="checkbox" id="billing">
+            <section class="monthly_yearly">
+                <label for="billing" class="toggle">
+                    <div>Monthly</div>
+                    <div class="switch"></div>
+                    <div class="yearly_label">Yearly</div>
+                </label>
+            </section>
+
+            <section class="pricing">
+                <div class="price_card">
+                    <h2>Basic</h2>
+                    <p>For perosnal projects and small experiments.</p>
+                    <div class="monthly">$9 <small>/month</small></div>
+                    <div class="yearly">$86 <small>/year</small></div>
+                    <ul>
+                        <li>Up to 3 projects</li>
+                        <li>Basic analytics</li>
+                        <li>Basic support</li>
+                    </ul>
+                    <button type="button">Choose Basic</button>
+                </div>
+                <div class="price_card">
+                    <div class="ribbon">Most popular</div>
+                        <h2>Pro</h2>
+                        <p>For teams that need more scale and faster support.</p>
+                        <div class="monthly">$19 <small>/month</small></div>
+                        <div class="yearly">$182 <small>/year</small></div>
+                    <ul>
+                        <li>Unlimited projects</li>
+                        <li>Team collaboration</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <button type="button">Choose Pro</button>
+                </div>
+                <div class="price_card">
+                    <h2>Premium</h2>
+                    <p>For larger organizations with custom requirements</p>
+                    <div class="monthly">$39 <small>/month</small></div>
+                    <div class="yearly">$374 <small>/year</small></div>
+                <ul>
+                    <li>SSO and audit logs</li>
+                    <li>Custom integrations</li>
+                    <li>Account manager</li>
+                </ul>
+                <button type="button">Choose premium</button>
+            </div>
+            </section>
+        </main>
+        <footer>
+            <p>©2026 Your First Project at Dev.al, built with pure HTML & CSS for learning.</p>
+        </footer>
+    </body> 
+</html>

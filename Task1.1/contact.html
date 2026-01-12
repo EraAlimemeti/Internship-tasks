@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css"/>
+    <title>Contact</title>
+    </head>
+    <body>
+        <header>
+        <div><u>HTML/CSS can do it all!</u></div>
+        <input type="checkbox" id="nav-tog">
+        <label class="hamburger" for="nav-tog" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </label>
+        <nav>
+            <a href="index1.html#pricing">Pricing</a>
+            <a href="team.html">Team</a>
+            <a class="active" href="contact.html">Contact</a>
+        </nav>
+        </header>
+        <main>
+            <section class="contact">
+                <h1>Contact Us</h1>
+                <p>We usually reply within one business day.</p>
+                <form class="contact-form" method="post">
+                    <label> Full Name *
+                        <input type="text" name="fullname" required>
+                    </label>
+                    <label> Email *
+                        <input type="email" name="email" required>
+                    </label>
+                    <label>
+                        Company
+                        <input type="text" name="company">
+                    </label>
+                    <label>
+                        Subject*
+                        <input type="text" name="subject" required>
+                    </label>
+                    <label>
+                        Topic
+                        <select name="topic">
+                            <option value=""> Select a topic</option>
+                            <option>Sales</option>
+                            <option>Support</option>
+                            <option>Billing</option>
+                            <option>Partner</option>
+                        </select>
+                    </label>
+                    <label class="full">
+                        Message *
+                            <textarea name="message" required></textarea>
+                    </label>
+                    <label>
+                        Prefered time
+                        <input type="time" name="time">
+                    </label>
+                    <label>
+                        Website
+                        <input type="URL" name="website">
+                    </label>
+                    <label>
+                        Budget
+                        <input type="range" name="budget" min="1" max="5">
+                        <span class="help">1=Small - 5=Large</span>
+                    </label>
+                    <label class="full">
+                        Attachment
+                        <input type="file" name="Attachment">
+                    </label>
+                    <div class="full">
+                        <p>How can we help?</p>
+                        <label><input type="radio" name="reason" value="Demo" checked>Demo</label>
+                        <label><input type="radio" name="reason" value="Quote"> Quote</label>
+                        <label><input type="radio" name="reason" value="Support"> Support</label>
+                    </div>
+                    <div class="full">
+                    <label>
+                        <input type="checkbox">
+                        Subscribe to newsletter
+                    </label>
+                    <label>
+                        <input type="checkbox" required>
+                        I consent to having this website store my submitted information *
+                        </label>
+                    </div>
+                    <div class="full actions">
+                        <button type="reset">Reset</button>
+                        <button type="submit">Send Message</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+         <footer>
+            <p>©2026 Your First Project at Dev.al, built with pure HTML & CSS for learning.</p>
+        </footer>
+    </body>    
+</html>
