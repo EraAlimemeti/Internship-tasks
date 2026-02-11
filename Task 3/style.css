@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff5f8;
+  padding: 24px 14px;
+}
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #f8d7e3;
+  border-radius: 14px;
+  padding: 18px;
+}
+h1 {
+  margin: 0 0 16px;
+  text-align: center;
+  color: #c65a82;
+  font-size: 26px;
+}
+.searchbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid #f4c2d7;
+  border-radius: 10px;
+  background: #fff9fb;
+  align-items: center;
+}
+.searchbar:focus-within {
+  border-color: #eaa3bd;
+}
+.tagbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+#searchInput {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+  flex: 1;
+  min-width: 160px;
+  padding: 6px 4px;
+}
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fde2ec;
+  border: 1px solid #f8c9d7;
+  color: #b14c73;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+.tagText {
+  cursor: pointer;
+}
+.tagX {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #b14c73;
+  padding: 0;
+}
+.autocomplete {
+  position: relative;
+  margin-top: 6px;
+}
+.autocomplete .acPanel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #fff9fb;
+  border: 1px solid #f4c2d7;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 50;
+}
+.autocomplete .acItem {
+  padding: 10px 12px;
+  cursor: pointer;
+  color: #b14c73;
+}
+.autocomplete .acItem:hover,
+.autocomplete .acItem.active {
+  background: #fde2ec;
+}
+.status {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 13px;
+  color: #a86a80;
+}
+.results {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  padding: 6px;
+}
+.item {
+  background: #fff9fb;
+  border: 1px solid #fbe4ec;
+  border-radius: 14px;
+  padding: 12px;
+}
+.name {
+  margin: 0 0 10px;
+  font-weight: 700;
+  color: #c65a82;
+  font-size: 16px;
+  text-align: left;
+}
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-start;
+}
+.badge {
+  display: inline-block;
+  background: #fde2ec;
+  color: #b14c73;
+  border: 1px solid #f8c9d7;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 1;
+}
+.empty {
+  grid-column: 1 / -1;
+  padding: 14px;
+  text-align: center;
+  color: #c07a94;
+  background: #fff9fb;
+  border: 1px dashed #f8d7e3;
+  border-radius: 12px;
+}
